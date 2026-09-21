@@ -3,9 +3,13 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view, parser_classes
+from rest_framework.exceptions import PermissionDenied
 from rest_framework.parsers import JSONParser
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
+
+from users.permissions import IsLocal
 
 from .models import Homestay, Booking, Review
 from .serializers import (
@@ -58,9 +62,18 @@ def homestay_list_create(request):
         })
 
     # POST — create a new listing
+    local_permission = IsLocal()
+    if not local_permission.has_permission(request, None):
+        raise PermissionDenied(local_permission.message)
+
     serializer = HomestayCreateSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
-    homestay = serializer.save()
+    homestay = serializer.save(
+        user=request.user,
+        host_name=request.user.get_full_name() or request.user.username,
+        host_phone=request.user.phone,
+        host_email=request.user.email,
+    )
     return Response(
         HomestayDetailSerializer(homestay).data,
         status=status.HTTP_201_CREATED,
@@ -92,6 +105,10 @@ def homestay_bookings(request, slug):
             "results": BookingSerializer(qs, many=True).data,
         })
 
+    authenticated_permission = IsAuthenticated()
+    if not authenticated_permission.has_permission(request, None):
+        raise PermissionDenied("Authentication is required to create a booking.")
+
     serializer = BookingSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     booking = serializer.save(homestay=hs)
@@ -118,6 +135,10 @@ def homestay_reviews(request, slug):
             "count": qs.count(),
             "results": ReviewSerializer(qs, many=True).data,
         })
+
+    authenticated_permission = IsAuthenticated()
+    if not authenticated_permission.has_permission(request, None):
+        raise PermissionDenied("Authentication is required to create a review.")
 
     serializer = ReviewSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)

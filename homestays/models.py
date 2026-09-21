@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+from django.conf import settings
 from django.db import models
 from django.utils.text import slugify
 import uuid
@@ -24,6 +25,13 @@ class Homestay(models.Model):
     description = models.TextField()
 
     # Host (no auth for hackathon — plain fields)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="homestays",
+    )
     host_name = models.CharField(max_length=120)
     host_phone = models.CharField(max_length=40)
     host_email = models.EmailField(blank=True)

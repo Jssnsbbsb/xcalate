@@ -1,4 +1,6 @@
 from rest_framework import serializers
+from users.models import User
+
 from .models import Homestay, Booking, Review
 
 
@@ -37,8 +39,16 @@ class HomestayListSerializer(serializers.ModelSerializer):
         ]
 
 
+class HomestayHostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["username", "phone", "business_name"]
+        read_only_fields = fields
+
+
 class HomestayDetailSerializer(serializers.ModelSerializer):
     reviews = ReviewSerializer(many=True, read_only=True)
+    host = HomestayHostSerializer(source="user", read_only=True)
 
     class Meta:
         model = Homestay
@@ -50,7 +60,6 @@ class HomestayCreateSerializer(serializers.ModelSerializer):
         model = Homestay
         fields = [
             "title", "description",
-            "host_name", "host_phone", "host_email",
             "region", "address", "latitude", "longitude",
             "price_per_night", "max_guests", "bedrooms", "beds", "bathrooms",
             "amenities", "images",
