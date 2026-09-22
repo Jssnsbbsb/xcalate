@@ -210,6 +210,110 @@ SERVICES = [
     ),
 ]
 
+EXTRA_SERVICES = [
+    # ============ PERFORMING ARTS ============
+    (
+        "Pena Traditional Musical Storytelling & Ballad Session",
+        "performance", "imphal", 2500, "per session", "+919774351953",
+        "Exclusive tourist recitals of 'Pena' — an ancient single-stringed bowed musical instrument used to invoke deities in Lai Haraoba festivals and narrate the love epic of Khamba and Thoibi. By Kanglei Indigenous Martial Arts and Cultural Society (KIMACS), Keishamthong Elangbam Leikai."
+    ),
+    (
+        "Lai Haraoba Ritualistic Dance Performance Guiding",
+        "performance", "imphal", 3000, "per group", "+919362111253",
+        "Managed access and cultural explanation sessions for international visitors wishing to observe the highly stylized sacred dances performed by Maibis (priestesses) to celebrate cosmic creation stories. By Lai Haraoba Ritualistic Dance Performers Ensemble, Thangmeiband Yumnam Leikai."
+    ),
+
+    # ============ MARTIAL ARTS & SPORTS ============
+    (
+        "Thang-Ta Ancient Sword & Spear Live Demonstration",
+        "performance", "imphal", 1500, "per person", "+914385279540",
+        "Curated 1-hour demonstrations of Huyen Langlon — breathing control, historical shields, active sword fights, and spear routines originally used by warriors to defend the kingdom. By Thang-Ta Federation of India, Yumnam Huidrom."
+    ),
+    (
+        "3-Day Thang-Ta Martial Art Bootcamp",
+        "workshop", "imphal", 4500, "per person", "+917005702675",
+        "Intensive 3-day beginner package covering ritualistic postures, defensive footwork, and the basic history behind Manipur's ancient blade culture. By Laaman Thang-Ta Academy, Tera Loukrakpam Leikai."
+    ),
+    (
+        "Manipuri Traditional Bamboo Bow Archery Trial",
+        "workshop", "imphal", 900, "per session", "+919402699699",
+        "Hands-on shooting workshop with master marksmen using hand-carved local bamboo longbows. Focuses on historical archery stances and traditional techniques. At Khuman Lampak Sports Complex."
+    ),
+    (
+        "Mukna Traditional Wrestling Exhibition Match",
+        "performance", "imphal", 2500, "per group", "+919354559217",
+        "Live tournaments of Mukna — a historic form of wrestling dating back to the 14th century, complete with ancient waist-girdle holding techniques and traditional refereeing costumes. By Mukna Association, Kakching Khunou."
+    ),
+
+    # ============ HERITAGE GUIDING ============
+    (
+        "Imphal Walks: WWII & Royal Heritage Trail",
+        "guide", "imphal", 1200, "per person", "+919856009357",
+        "High-end walking tours through Kangla Fort, royal coronation sites, sacred groves, and the intense World War II battlegrounds of the Battle of Imphal. Includes certified English-speaking historians. By Imphal Walks."
+    ),
+    (
+        "Andro Cultural Heritage Village Guided Walk",
+        "guide", "imphal", 700, "per person", "+918131980420",
+        "Guided walk through the famous open-air museum of Andro — highlighting the century-old sacred fire that has been continuously lit, unique pottery huts, and tribal doll installations. By Andro Cultural Heritage Village Interpreters."
+    ),
+    (
+        "Khongjom War Memorial History Tour",
+        "guide", "thoubal", 800, "per person", "+913852410687",
+        "On-site specialized historical tour covering the heroic stand of Paona Brajabasi against British forces in 1891. Includes guided climb up the scenic Kheba Hill monument. By Khongjom War Memorial Heritage Guides."
+    ),
+    (
+        "Sekta Archaeological Living Museum Tour",
+        "guide", "imphal", 1500, "per person", "+919362111253",
+        "Certified English/Hindi-speaking micro-guide tour of the Sekta Archaeological Living Museum, ancient monolith locations, and cave paths. By Incredible Manipur Tourist Information Center."
+    ),
+
+    # ============ CRAFT WORKSHOPS ============
+    (
+        "Ancient Split-Bamboo Fish Trap Weaving Workshop",
+        "workshop", "churachandpur", 1500, "per person", "+919862028656",
+        "Tribal craft training session where elders teach the geometric secrets behind mathematical bamboo splitting and interlocking weave patterns for 'Long' fishing baskets. By Maring Bamboo & Cane Basketry Weaving Cell, Maring Phunal Village, Chandel."
+    ),
+    (
+        "Wangkhei Loom-to-Garment Handloom Discovery Walk",
+        "guide", "imphal", 1000, "per person", "+913852450340",
+        "Takes visitors inside residential lanes where Meitei women weave high-transparency luxury fabrics right underneath their traditional stilt houses on customized wooden frames. By Wangkhei Weaving Clusters Guide Service."
+    ),
+
+    # ============ CULINARY EXPERIENCES ============
+    (
+        "Chak-Hao Kheer (Black Rice Dessert) Making Session",
+        "workshop", "imphal", 1200, "per person", "+919362111253",
+        "Hands-on culinary service teaching food travelers how to extract the deep purple hue and nutty aroma of Manipur's GI-tagged black rice using local techniques. By Chak-Hao Organic Food Artisans Guild, Lamphelpat."
+    ),
+    (
+        "Loktak Lake Smoked Fish & Foraging Culinary Tour",
+        "other", "loktak", 2200, "per person", "+918415076121",
+        "Dynamic culinary tour where tourists catch native fish with local fishermen and smoke them using traditional hay and wood embers inside a floating bamboo hut. By Loktak Lake Traditional Smoked Fish Culinary Tours, Moirang."
+    ),
+    (
+        "Sirarakhong Hathei Chilli Paste Workshop",
+        "workshop", "ukhrul", 1000, "per person", "+919435148180",
+        "Learn to safely use the highly vibrant, non-pungent Sirarakhong Hathei chilli to create traditional tribal pastes over open woodfires. By Sirarakhong Hathei Spice Kitchen, Ukhrul."
+    ),
+    (
+        "Ima Keithel Fermented Food Tasting Trail",
+        "other", "imphal", 900, "per person", "+919856009357",
+        "Guided flavor walk through Asia's largest all-women market — educating culinary travelers on bamboo-shoot fermentation (Soibum) and sun-dried fish aging (Ngari). By Ima Keithel Organic Fermented Food Explorations."
+    ),
+
+    # ============ EXTRA TRANSPORT / LOGISTICS ============
+    (
+        "Kangla Fort Sunrise Photo Walk",
+        "guide", "imphal", 700, "per person", "+919999999999",
+        "Early-morning photo walk through Kangla Fort with a local photographer-guide who knows the best sunrise angles. Includes chai and traditional Manipuri breakfast."
+    ),
+    (
+        "Manipur Village Homestay Day Trip",
+        "transport", "imphal", 2000, "per group", "+919999999999",
+        "Full-day visit to a traditional Manipuri village with home-cooked lunch, weaving demonstration, and cultural exchange. Up to 4 passengers."
+    ),
+]
+
 
 class Command(BaseCommand):
     help = "Seed the marketplace with real Manipur artisans and services"
@@ -224,6 +328,8 @@ class Command(BaseCommand):
 
         product_created = self._seed_items(PRODUCTS, "product", seller)
         service_created = self._seed_items(SERVICES, "service", seller)
+        extra_created = self._seed_items(EXTRA_SERVICES, "service", seller)
+        service_created += extra_created
 
         self.stdout.write("")
         self.stdout.write(self.style.SUCCESS("=" * 60))
